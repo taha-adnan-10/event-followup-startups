@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors F-up</title>
+    
+    <!-- Explicit favicon links in addition to manifest -->
+    <link rel="icon" type="image/png" href="investor.png">
+    <link rel="apple-touch-icon" href="investor.png">
+    <link rel="shortcut icon" href="investor.png">
+    
+    <!-- Add these meta tags for better icon control -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Investors F-up">
+    
+    <link rel="manifest" href="investor-manifest.json">
+
+    <!-- NO AUTOMATIC REDIRECT SCRIPT -->
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .icon {
+            width: 128px;
+            height: 128px;
+            margin: 20px auto;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .note {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Investors F-up</h1>
+        <img class="icon" src="investor.png" alt="Investor Icon">
+        <p>Create a homescreen shortcut to the Investors F-up form with a custom icon.</p>
+        
+        <div class="instructions">
+            <h3>To add to your homescreen:</h3>
+            <ol>
+                <li>In Chrome, tap the three-dot menu (⋮) in the top-right corner</li>
+                <li>Select "Add to Home screen"</li>
+                <li>Confirm by tapping "Add"</li>
+            </ol>
+        </div>
+        
+        <a href="https://airtable.com/appIRDz8HmqjZRo8p/pag7MYy6NjqwITuo9/form" class="btn">Go to Airtable Form</a>
+        
+        <p class="note">After adding to homescreen, you'll need to tap the form button or use the direct link to access the form.</p>
+    </div>
+</body>
+</html>
