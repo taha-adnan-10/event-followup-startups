@@ -2,7 +2,7 @@
   "name": "Startup F-up",
   "short_name": "Startup F-up",
   "description": "Shortcut to Startup F-up form",
-  "start_url": "./index.html",
+  "start_url": "./app.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
