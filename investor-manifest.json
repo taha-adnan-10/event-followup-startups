@@ -1,0 +1,22 @@
+{
+  "name": "Investors F-up",
+  "short_name": "Investors F-up",
+  "description": "Shortcut to Investors F-up form",
+  "start_url": "./investor-app.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "investor.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "investor.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
