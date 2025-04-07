@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Shortcut</title>
+    
+    <!-- Explicit favicon links in addition to manifest -->
+    <link rel="icon" type="image/png" href="molecule.png">
+    <link rel="apple-touch-icon" href="molecule.png">
+    <link rel="shortcut icon" href="molecule.png">
+    
+    <!-- Add these meta tags for better icon control -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Airtable Form">
+    
     <link rel="manifest" href="manifest.json">
+
     <script>
         // This script redirects to your desired URL
         window.onload = function() {
