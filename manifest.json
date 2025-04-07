@@ -1,6 +1,6 @@
 {
-  "name": "Airtable Form",
-  "short_name": "Airtable",
+  "name": "Startup F-up",
+  "short_name": "Startup F-up",
   "description": "Custom shortcut to Airtable form",
   "start_url": "./index.html",
   "display": "standalone",
