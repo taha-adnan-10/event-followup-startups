@@ -18,16 +18,8 @@
     
     <link rel="manifest" href="manifest.json">
 
-    <script>
-        window.onload = function() {
-            // ONLY redirect if opened from homescreen
-            // This checks if the page is in standalone mode (added to homescreen)
-            if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
-                window.location.href = "https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form";
-            }
-            // If it's a regular browser visit, do nothing (don't redirect)
-        }
-    </script>
+    <!-- NO AUTOMATIC REDIRECT SCRIPT -->
+    
     <style>
         body {
             font-family: sans-serif;
@@ -63,11 +55,21 @@
         .instructions li {
             margin-bottom: 10px;
         }
-        .direct-link {
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .note {
             margin-top: 30px;
-            padding: 10px;
-            background-color: #f8f8f8;
-            border-radius: 5px;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
 </head>
@@ -75,7 +77,7 @@
     <div class="container">
         <h1>Startup F-up</h1>
         <img class="icon" src="molecule.png" alt="Molecule Icon">
-        <p>Add this page to your homescreen to create a shortcut to the Startup F-up form.</p>
+        <p>Create a homescreen shortcut to the Startup F-up form with a custom icon.</p>
         
         <div class="instructions">
             <h3>To add to your homescreen:</h3>
@@ -84,12 +86,11 @@
                 <li>Select "Add to Home screen"</li>
                 <li>Confirm by tapping "Add"</li>
             </ol>
-            <p>Once added, the shortcut will open your form directly.</p>
         </div>
         
-        <div class="direct-link">
-            <p>Or <a href="https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form">click here</a> to go directly to the form.</p>
-        </div>
+        <a href="https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form" class="btn">Go to Airtable Form</a>
+        
+        <p class="note">After adding to homescreen, you'll need to tap the form button or use the direct link to access the form.</p>
     </div>
 </body>
 </html>
