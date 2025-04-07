@@ -19,12 +19,13 @@
     <link rel="manifest" href="manifest.json">
 
     <script>
-        // This script checks if opened from homescreen, then redirects to the target
         window.onload = function() {
-            // Check if the page is being opened from the homescreen
+            // ONLY redirect if opened from homescreen
+            // This checks if the page is in standalone mode (added to homescreen)
             if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
                 window.location.href = "https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form";
             }
+            // If it's a regular browser visit, do nothing (don't redirect)
         }
     </script>
     <style>
@@ -62,6 +63,12 @@
         .instructions li {
             margin-bottom: 10px;
         }
+        .direct-link {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -78,6 +85,10 @@
                 <li>Confirm by tapping "Add"</li>
             </ol>
             <p>Once added, the shortcut will open your form directly.</p>
+        </div>
+        
+        <div class="direct-link">
+            <p>Or <a href="https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form">click here</a> to go directly to the form.</p>
         </div>
     </div>
 </body>
