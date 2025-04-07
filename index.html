@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup F-up</title>
     
-    <!-- Explicit favicon links -->
+    <!-- Explicit favicon links in addition to manifest -->
     <link rel="icon" type="image/png" href="molecule.png">
     <link rel="apple-touch-icon" href="molecule.png">
     <link rel="shortcut icon" href="molecule.png">
     
-    <!-- PWA meta tags -->
+    <!-- Add these meta tags for better icon control -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,8 +19,13 @@
     <link rel="manifest" href="manifest.json">
 
     <script>
-        // Immediately redirect to the target URL regardless of how the page is opened
-        window.location.href = "https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form";
+        // This script checks if opened from homescreen, then redirects to the target
+        window.onload = function() {
+            // Check if the page is being opened from the homescreen
+            if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
+                window.location.href = "https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form";
+            }
+        }
     </script>
     <style>
         body {
@@ -42,12 +47,38 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+        h1 {
+            color: #333;
+        }
+        .icon {
+            width: 128px;
+            height: 128px;
+            margin: 20px auto;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Redirecting to Startup F-up...</h1>
-        <p>If you are not redirected automatically, <a href="https://airtable.com/app4SGoW9cVV0ob0j/pag7MYy6NjqwITuo9/form">click here</a>.</p>
+        <h1>Startup F-up</h1>
+        <img class="icon" src="molecule.png" alt="Molecule Icon">
+        <p>Add this page to your homescreen to create a shortcut to the Startup F-up form.</p>
+        
+        <div class="instructions">
+            <h3>To add to your homescreen:</h3>
+            <ol>
+                <li>In Chrome, tap the three-dot menu (⋮) in the top-right corner</li>
+                <li>Select "Add to Home screen"</li>
+                <li>Confirm by tapping "Add"</li>
+            </ol>
+            <p>Once added, the shortcut will open your form directly.</p>
+        </div>
     </div>
 </body>
 </html>
