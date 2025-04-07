@@ -1,7 +1,7 @@
 {
   "name": "Startup F-up",
   "short_name": "Startup F-up",
-  "description": "Custom shortcut to Airtable form",
+  "description": "Shortcut to Startup F-up form",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
@@ -11,14 +11,12 @@
     {
       "src": "molecule.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
       "src": "molecule.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     }
   ]
 }
